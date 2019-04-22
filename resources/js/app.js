@@ -5,15 +5,32 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
 
 window.Vue = require('vue');
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueSwal from 'vue-swal'
+import Spinner from 'vue-simple-spinner'
+
+// import Paginate from 'vuejs-paginate'
+// Vue.component('paginate', Paginate)
+window.Vue.use(VueRouter);
+window.Vue.use(VueSwal)
+window.Vue.use(Spinner) 
+
+// Vue.component('selectize-component', require('vue2-selectize'));
+// Vue.component('vue-pagination', require('laravel-vue-pagination'));
+Vue.component('vue-simple-spinner',require('vue-simple-spinner'));
+Vue.component('vue-pagination', require('laravel-vue-pagination'));
+
 
 
 Vue.use(VueRouter)
+
+// Vue.component('vue-pagination', require('laravel-vue-pagination'));
 
 import Index from './components/Index.vue';
 import Create from './components/Create.vue';
@@ -31,12 +48,19 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  hashbang: true,
+  history: true,
   routes // short for `routes: routes`
 })
+
   
 // const app = new Vue({
 //     el: '#app'
 // });
 const app = new Vue({
   router
+  // data: {
+  //   langs: ['JavaScript', 'PHP', 'HTML', 'CSS', 'Ruby', 'Python', 'Erlang'],
+  //   paginate: ['languages']
+  // }
 }).$mount('#app')

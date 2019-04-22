@@ -24,6 +24,11 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "vue-router": "^3.0.4"
+        "laravel-vue-pagination": "^2.3.0",
+        "vue-paginate": "^3.6.0",
+        "vue-router": "^3.0.4",
+        "vue-simple-spinner": "^1.2.8",
+        "vue-swal": "^1.0.0",
+        "vuejs-paginate": "^2.1.0"
     }
 }

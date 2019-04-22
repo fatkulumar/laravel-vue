@@ -15,7 +15,7 @@ class postTableSedder extends Seeder
         $faker = Faker\Factory::create('id_ID');
                foreach (range(1, 100) as $loop) {
             DB::table('posts')->insert([
-                'title'      => 'Welcome',
+                'title'      => 'Welcome'.$loop,
                 'description'       => str_slug('Welcome'),
             ]);
         }

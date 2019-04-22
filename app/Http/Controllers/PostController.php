@@ -92,4 +92,10 @@ class PostController extends Controller
         $post->delete();
         return $post;
     }
+
+    public function cari(Request $request)
+	{
+        $cari =  Post::where('title','LIKE',"%$request->q%")->get();  
+        return $cari; 
+	}
 }

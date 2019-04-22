@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PostController@homepage')->name('homepage');
 Route::resource('/post', 'PostController');
+Route::get('/cari','PostController@cari')->name('cari');
